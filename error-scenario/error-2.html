@@ -17,15 +17,14 @@
         <link rel="shortcut icon" href="/creditcards/favicon.png">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@master/extras/noUiSlider/nouislider.css">
-        <link rel="stylesheet" type="text/css" href="css/styles.css?rel=b60e77b9f8">
-        <link rel="stylesheet" type="text/css" href="css/component.css">
-        <link rel="stylesheet" type="text/css" href="css/insta-card.css">
-        <link rel="stylesheet" type="text/css" href="css/scroll.css">
-        <link rel="stylesheet" type="text/css" href="css/sbi-min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css?rel=b60e77b9f8">
+        <link rel="stylesheet" type="text/css" href="../css/component.css">
+        <link rel="stylesheet" type="text/css" href="../css/insta-card.css">
+        <link rel="stylesheet" type="text/css" href="../css/scroll.css">
+        <link rel="stylesheet" type="text/css" href="../css/sbi-min.css">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
 
-        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
 
     </head>
     <body onunload="" class="overlay-opened">
@@ -528,7 +527,7 @@
                                         <li> <a href="javascript:void(0);">Opt for e-statement</a></li>
                                         <li> <a href="javascript:void(0);">Add-on Card</a></li>
                                         <li> <a href="javascript:void(0);">International Number Update</a></li>
-                                        <li class="active"> <a href="javascript:void(0);">Credit balance refund</a></li>
+                                        <li> <a href="javascript:void(0);">Credit balance refund</a></li>
                                         <li> <a href="javascript:void(0);">OTP for IVR/Moto</a></li>
                                         <li> <a href="javascript:void(0);">Dispute Transaction</a></li>
                                         <li> <a href="javascript:void(0);">Track Dispute</a></li>
@@ -1065,7 +1064,7 @@
 
 
 
-                                    <li data-val="Easy Money">
+                                    <li class="active" data-val="Easy Money">
                                         <a href="javascript:void(0);" data-href="/creditcards/app/benefits/easy-money-draft" onclick="submitForm('/creditcards/app/benefits/easy-money-draft', true);
                                                 setAnalyticsPost('Easy Money')">Easy Money</a>
                                     </li>
@@ -1187,7 +1186,7 @@
 
                             </li>
 
-                            <li class="active"> <a href="javascript:void(0);"><span class="icon card-app"></span> Services<span class="arrow"></span></a>
+                            <li> <a href="javascript:void(0);"><span class="icon card-app"></span> Services<span class="arrow"></span></a>
 
 <ul class="child-node">
 
@@ -1198,7 +1197,7 @@
     <li> <a href="javascript:void(0);">Card Activation</a></li>
     <li> <a href="javascript:void(0);">Track Service Request</a></li>
     <li> <a href="javascript:void(0);">Opt for e-statement</a></li>
-    <li class="active"> <a href="javascript:void(0);">Add-on Card</a></li>
+    <li> <a href="javascript:void(0);">Add-on Card</a></li>
     <li> <a href="javascript:void(0);">International Number Update</a></li>
     <li> <a href="javascript:void(0);">Credit balance refund</a></li>
     <li> <a href="javascript:void(0);">OTP for IVR/Moto</a></li>
@@ -1391,7 +1390,7 @@
 
 
 
-                     <div class="page-top mobile-custom-gap" id="hide-on-e-card">
+                    <div class="page-top mobile-custom-gap" id="hide-on-e-card">
                         <div class="left-heading-viw">
                             <h3>Apply for an Add-on Card</h3>
                             
@@ -1404,17 +1403,117 @@
     </div>
                         
                     </div>
-                    <section class="multicard-process credit-balance-refund-wrapp">
+                    <section class="multicard-process credit-balance-refund-wrapp easy-money-wrapp">
                         <section class="main-wrap my-profile active">
-
-                            <div class="list-container-selectbox align-item-center alert-message wrong-message">
-                                <h2>Request Declined!</h2>
-                                <p>Thankyou for showing interest in Add-on Card. Due to internal policies you are currently not eligible to apply for Add-on Card. For more details please reach out to Customer Care on 18601801290 or 39020202 (prefix local STD code). 
-    </p>
+                            <div class="tabs">
+                                <img src="../img/tabs.PNG" alt="" class="w-100">
                             </div>
+                            <div class="tabs-block">
+                                <div class="border-block-y pb-0">
+                                    <div class="conatct-block mt-0">
+                                        <div class="btn-block view-edit-details mt-0">
+                                            <div class="list-container-selectbox align-item-center alert-message wrong-message">
+                                                <h2>Request Declined!</h2>
+                                                <p>Your <Name> entered did not match with the KYC documents. Please enter the correct details and 
+                                                    try again.
+                    </p>
+                                            </div>
+                                            <a href="../index.html" class="blue-btn m-0  mt-20">Try Again</a>
+                                            
+                                            
+                                        </div>
+                                        
+                                        <!-- <div class="card-view-holder message-seccess-view mb-15 card-note-holder">
+                                            <div class="list-container-selectbox flex-row align-item-center cong-message">
+                                                <div class="gray-box-title">Note - </div>
+                                                <ul>
+                                                    <li>Either E mail ID or Mobile Number can be updated at a time</li>
+                                                    <li>Incase you are unable to receive OTP on your E mail ID or Mobile Number, kindly start with
+                                                        the KYC Journey.<br>
+                                                        To Start with KYC Journey Please, <a href="#">Click Here</a></li>
+                                                </ul>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="view-edit-details mt-20">
+                                <p class="text-14 mb-25">If registered mobile number & Email Id are inactive or you are not receiving the OTP, please<br>
+                                    proceed to update your <a href="../kyc-flow/kyc-flow.html">KYC Details</a></p>
+                                <p class="text-14">To track your Service Request , please <a href="#">Click Here</a></p>
+                            </div> -->
+                        </section>
+    <section class="otp-section-block view-edit">
+        <hr>
 
-
+<section class="main-wrap my-profile active bank-detail-wrapp"> 
+    <div class="gray-block">
+        <div class="card-view-holder message-seccess-view">
+                                                <div class="list-container-selectbox flex-row align-item-center cong-message">
+                                                    <h2 class="trans-style d-inline-block m-0 mr-5">Enter One-Time Password</h2>
+                                                    <p>Please enter the One Time Password (OTP) sent on your registered mobile number XXXXXX7024 and email ID: PSXXXX@GMAIL.COM. If you have not received the OTP, click Resend OTP.</p>
+                                                    <div class="otp-block">
+                                                        <label>Enter OTP<span class="red-text">*</span></label>
+                                                        <input type="number" onclick="viewEditInput();" />
+                                                        <a href="#" class="input-blue-text">Resend OTP</a>
+                                                    </div>
+                                                    <div class="otp-submit-block">
+                                                        <a href="javascript:void(0);" class="step-2 blue-btn mb-0 gray-btn pointer-events-none" onclick="cmnSubmit();" id="v_e_submit">Submit</a>
+                                                        <a href="#" class="step-2 blue-btn gray-btn mb-0">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+    </div>
 </section>
+    </section>
+
+    <section class="otp-section-block email-submit-otp-block">
+        <hr>
+
+<section class="main-wrap my-profile active bank-detail-wrapp"> 
+    <div class="gray-block">
+        <div class="card-view-holder message-seccess-view">
+                                                <div class="list-container-selectbox flex-row align-item-center cong-message">
+                                                    <h2 class="trans-style d-inline-block m-0 mr-5">Enter One-Time Password</h2>
+                                                    <p>Please enter One TIme Password (OTP) that has been sent on your new Email ID XXXXXX6732 @gmail.com. If you have not received the OTP, click Resend OTP</p>
+                                                    <div class="otp-block">
+                                                        <label>Enter OTP<span class="red-text">*</span></label>
+                                                        <input type="number" onclick="viewEditInput2();" />
+                                                        <a href="#" class="input-blue-text">Resend OTP</a>
+                                                    </div>
+                                                    <div class="otp-submit-block">
+                                                        <a href="congratulations-email.html" class="step-2 blue-btn mb-0 gray-btn pointer-events-none" id="v_e_submit_2">Submit</a>
+                                                        <a href="#" class="step-2 blue-btn gray-btn mb-0">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+    </div>
+</section>
+    </section>
+
+    <section class="otp-section-block phone-submit-otp-block">
+        <hr>
+
+<section class="main-wrap my-profile active bank-detail-wrapp"> 
+    <div class="gray-block">
+        <div class="card-view-holder message-seccess-view">
+                                                <div class="list-container-selectbox flex-row align-item-center cong-message">
+                                                    <h2 class="trans-style d-inline-block m-0 mr-5">Enter One-Time Password</h2>
+                                                    <p>Please enter One TIme Password (OTP) that has been sent on your new Mobile Number XXXXXX6732. If you have not received the OTP, click Resend OTP</p>
+                                                    <div class="otp-block">
+                                                        <label>Enter OTP<span class="red-text">*</span></label>
+                                                        <input type="number" onclick="viewEditInput3();" />
+                                                        <a href="#" class="input-blue-text">Resend OTP</a>
+                                                    </div>
+                                                    <div class="otp-submit-block">
+                                                        <a href="congratulations-mobile.html" class="step-2 blue-btn mb-0 gray-btn pointer-events-none" id="v_e_submit_3">Submit</a>
+                                                        <a href="#" class="step-2 blue-btn gray-btn mb-0">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+    </div>
+</section>
+    </section>
                     </section>
                     
                 </div>
@@ -1449,56 +1548,22 @@
             </div>
 
             <form >
-                <div class="modal-overlay neft-ifse-popup " id="neft-ifsc-popup">
-                      <section class="modal neft-ifsc-modal" id="neft-searchPopup" style="margin-top: -190px;">
+                <div class="modal-overlay discliamer-popup " id="neft-ifsc-popup">
+                      <section class="modal" id="neft-searchPopup" style="margin-top: -190px;">
                           <div class="modal-wrap">
-                              <header>
+                              <!-- <header>
                                     <span class="close-neft-popup"></span>
-                                  <h1 class="modal-title">Fill in the details below to find IFSC code of your bank</h1> 
                                                     
-                              </header>
-                               <section class="content">
-                                  <ul class="form-field-list" id="neftPopupFields">
-                                    <li class="request-boxes1">
-                                        <label class="neft-left-label" for="name">Bank Name</label>
-                                        <div class="field-wrap">
-                                            <input type="text" name="name" id="neftBankName" value="">
-                                            <article class="tooltip tooltip-w190">
-                                                <p>Start typing and choose from the list of banks shown</p>
-                                            </article>
-                                        </div>
-                                    </li>
-                                    <li class="request-boxes1">
-                                        <label class="neft-left-label">City</label>
-                                        <div class="field-wrap name-txtbox3">
-                                            <input type="text" id="neftCityDetail" disabled="disabled">
-                                            <article class="tooltip tooltip-w190">
-                                                <p>Enter first 3 letters of city name and select from the list. <br>
-
-                                                    </p>
-                                            </article>
-                                        </div>
-                                    </li>
-                                    <li class="request-boxes1">
-                                        <label class="neft-left-label">Search Branch</label>
-                                        <div class="field-wrap">
-                                            <input type="text" id="neftBranchHint" disabled="disabled">
-                                            <article class="tooltip tooltip-w190">
-                                                <p>Enter at least first 3 letters of branch/area name and click on 'Search'<br>
-
-                                                    Eg: If branch is 'Dwarka, type 'Dwa' and click on Search</p>
-                                            </article>
-                                        </div>
-                                    </li>
-                                </ul>
-                              </section>
+                              </header> -->
+                              <img src="../img/disclaimer.PNG" alt="" style="width: 100%;">
                                                  
                           </div>
                           <div class="modal-content clearfix">
-                                <div class="reset-box1"> <a href="javascript:void(0);" id="reset-search-fields" class="button secondary"> Reset</a> </div>		  
-                                 <div class="neft-button-wrap">
-                                       <a href="javascript:void(0);" class="button primary branch-searchBtn" id="neft-srchBtn">Search</a>
-                                 </div>
+                                <div class="modal-button-block">
+                                    <a href="digilocker.html" class="button primary branch-searchBtn">Proceed</a>
+                                    <a href="javascript:void(0);" class="button primary branch-searchBtn close-neft-popup">Cancel</a>
+                                     <!-- <a href="javascript:void(0);" id="reset-search-fields" class="button secondary"> Reset</a> -->
+                                     </div>	
                               </div>
                       </section>
                       
@@ -1578,32 +1643,11 @@
 
         </div>
 
-
+        
 
         <script src="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@master/extras/noUiSlider/nouislider.min.js"></script>
-        <script src="js/custom-file-input.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<script>
-    $(function() {
-        $(function() {
-
-$('input[name="birthday"]').daterangepicker({
-    singleDatePicker: true,
-    showDropdowns: true,
-    autoUpdateInput: false,
-    locale: {
-        cancelLabel: 'Clear'
-    }
-});
-
-$('input[name="birthday"]').on('apply.daterangepicker', function(ev, picker) {
-    $(this).val(picker.startDate.format('MM/DD/YYYY'));
-});
-
-});
-    });
-    </script>
+        <script src="../js/custom-file-input.js"></script>
+        
         <script type="text/javascript">
                         window.onload = function () {
 
@@ -1654,8 +1698,6 @@ $(document).on("click", ".toggle", function(){
         </script>
        <script>
             $(document).ready(function () {
-			
-			
 				$('.otp-form').on('submit', function() {
                                     $("#myModal").hide();
                                     $(".multicard-process").hide();
@@ -2275,13 +2317,13 @@ $(document).on("click", ".toggle", function(){
                 $('#readout').val($(this).data('holding'));
             });
 
-            $('.ifsc-link-block').click(function() {
-                $('.neft-ifse-popup').addClass('open');
+            $('.discliamer-link-block').click(function() {
+                $('.discliamer-popup').addClass('open');
                 $('html').addClass('modal-open');
             });
 
             $('.close-neft-popup').click(function() {
-                $('.neft-ifse-popup').removeClass('open');
+                $('.discliamer-popup').removeClass('open');
                 $('html').removeClass('modal-open');
             });
 
@@ -2304,9 +2346,68 @@ $(document).on("click", ".toggle", function(){
             
             });
 
-            function tickActive() {
-                $('.otp-section-block').show();
-                $('.tick-buttons-block').hide();
+            function viewEdit() {
+                $('.view-edit').show();
+                $('.view-edit-details').hide();
+            }
+
+            function cmnSubmit() {
+                $('.update-lable-contact-block').show();
+                $('.card-note-holder').show();
+                $('.view-edit').hide();
+                $('.unmasked').show();
+                $('.masked').hide();
+            }
+
+            function updateEmail() {
+                $('.email-block span').hide();
+                $('.email-block input').show();
+                $('.emai-cncl-submit').show();
+                $('.update-email').hide();
+                $('.update-phone-number').hide();
+            }
+
+            function emailUpdateSubmit() {
+                $('.email-submit-otp-block').show();
+                $('.form-btn-block').hide();
+                $('.email-block .unmasked').show();
+                $('.email-block input').hide();
+            }
+
+
+            function updatePhoneNumber() {
+                $('.phone-number-block span').hide();
+                $('.phone-number-block input').show();
+                $('.phone-cncl-submit').show();
+                $('.update-email').hide();
+                $('.update-phone-number').hide();
+            }
+
+            function phoneUpdateSubmit() {
+                $('.phone-submit-otp-block').show();
+                $('.form-btn-block').hide();
+                $('.phone-number-block .unmasked').show();
+                $('.phone-number-block input').hide();
+            }
+
+            function cancelUpdate() {
+                $('.update-email').show();
+                $('.update-phone-number').show();
+                $('.form-btn-block').hide();
+                $('.lable-contact-block .unmasked').show();
+                $('.lable-contact-block input').hide();
+            }
+
+            function viewEditInput() {
+                $('#v_e_submit').removeClass('gray-btn pointer-events-none');
+            }
+
+            function viewEditInput2() {
+                $('#v_e_submit_2').removeClass('gray-btn pointer-events-none');
+            }
+
+            function viewEditInput3() {
+                $('#v_e_submit_3').removeClass('gray-btn pointer-events-none');
             }
         </script>
 

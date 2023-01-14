@@ -1,0 +1,833 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>SBI Card</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <script type="text/javascript"> var lang = "en";</script>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="/creditcards/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@master/extras/noUiSlider/nouislider.css">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css?rel=b60e77b9f8">
+        <link rel="stylesheet" type="text/css" href="../css/component.css">
+        <link rel="stylesheet" type="text/css" href="../css/insta-card.css">
+        <link rel="stylesheet" type="text/css" href="../css/scroll.css">
+        <link rel="stylesheet" type="text/css" href="../css/sbi-min.css">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+        <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+
+    </head>
+    <body onunload="" class="overlay-opened">
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <input type="hidden" class="b2b_omniture_role" value="USER">
+        <a href="congratulations.html">
+            <img src="img/digilocker.PNG" alt="" style="width: 100%; height: 100vh;">
+        </a>
+
+
+
+        <script src="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@master/extras/noUiSlider/nouislider.min.js"></script>
+        <script src="../js/custom-file-input.js"></script>
+        
+        <script type="text/javascript">
+                        window.onload = function () {
+
+                            window.onscroll = function () {
+//                                alert('hello');
+                                // var scroll = window.scrollY;
+                                // alert('heffffffffffllo');
+                                var scroll = 10;
+                                // if (scroll >= 10)
+                                if (window.pageYOffset >= scroll) {
+                                    // alert('hello');
+
+                                    document.querySelector(".slideBack").classList.add("showSlide");
+                                    document.querySelector(".scrollDown").classList.add("hideScrollText");
+                                    document.querySelector(".slideCont .frontCard").classList.add("hideFront");
+                                } else {
+                                    document.querySelector(".slideBack").classList.remove("showSlide");
+                                    document.querySelector(".scrollDown").classList.remove("hideScrollText");
+                                    document.querySelector(".slideCont .frontCard").classList.remove("hideFront");
+                                }
+                            }
+                        }
+        </script>
+        <script>
+
+$(document).on("click", ".toggle", function(){
+    //alert("gggg");
+    $(this).next(".collapse-content").toggleClass("show");
+    $(this).find(".sub-heading").toggle();
+});
+
+
+//var coll = document.getElementsByClassName("toggle");
+//var i;
+//
+//for (i = 0; i < coll.length; i++) {
+//  coll[i].addEventListener("click", function() {
+//    this.classList.toggle("active");
+//    var content = this.nextElementSibling;
+//    if (content.style.maxHeight){
+//      content.style.maxHeight = null;
+//    } else {
+//      content.style.maxHeight = content.scrollHeight + "px";
+//    } 
+//  });
+//}
+
+        </script>
+       <script>
+            $(document).ready(function () {
+			
+			
+				$('.otp-form').on('submit', function() {
+                                    $("#myModal").hide();
+                                    $(".multicard-process").hide();
+                                     $("#genrate-e-msz").show();
+					$('html, body').animate({
+						 scrollTop: (target.offset().top - 110)
+					});
+					return false;
+				});
+					
+			
+			
+                $(".line-btn").click(function () {
+                    $(this).hide();
+                    $(this).next(".hidden-points").show();
+                    $(this).nextAll(".line-btn-less").show();
+                });
+
+
+                $(".line-btn-less").click(function () {
+                    $(this).hide();
+                    $(this).prev(".hidden-points").hide();
+                    $(this).prevAll(".line-btn").show();
+                });
+
+                $(".show-cre-limit-msz").click(function () {
+                    $(".credit-limit-view-step").hide();
+                    $(".cre-limit-message-hidden").show();
+                });
+
+
+                $("#change-credit-limit").click(function () {
+                    $(this).hide();
+                    $("#limit-change").show();
+                });
+
+
+                $("#edit-address").click(function () {
+                    $(this).hide();
+                    $("#address-view").hide();
+                    $("#change-address").show();
+                });
+
+
+                $("#cancle-edit-add").click(function () {
+                    $("#edit-address").show();
+                    $("#address-view").show();
+                    $("#change-address").hide();
+                });
+
+
+                $(".addmore").click(function () {
+                    $(this).hide();
+                    $("#uplod-2").show();
+                });
+
+
+                $("#multicard-process-show").click(function () {
+                    $(".multicard-process").hide();
+                    $("#genrate-e-msz").show();
+                    $("#myModal").hide();
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+					if (target.length) {
+						$('html,body').animate({
+						    scrollTop: (target.offset().top - 130)
+						});
+						return false;
+					}
+                });
+
+                $("#genrate-e-card-screen").click(function () {
+                    $("#genrate-e-msz").hide();
+                    $("#hide-on-e-card").hide();
+                    
+                    $("#genrate-e-card-view").show();
+
+                });
+	
+
+                            $(".step2").click(function () {
+                                $(this).parents(".main-wrap.my-profile").removeClass("active");                              
+                                $(this).parents(".main-wrap.my-profile").addClass("filled");                              
+                                $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");                              
+                                $(this).parents(".main-wrap.my-profile").siblings("#step2").addClass("active");     
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                                if (target.length) {
+                                    $('html,body').animate({
+                                      scrollTop: (target.offset().top - 110)
+                                    });
+                                    return false;
+                                }
+                            });
+                            $(".step-2").click(function () {
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                                if (target.length) {
+                                    $('html,body').animate({
+                                      scrollTop: (target.offset().top - 110)
+                                    });
+                                    return false;
+                                }
+                           });
+                            $(".step3").click(function () {
+                                $(this).parents(".main-wrap.my-profile").removeClass("active");   
+                                 $(this).parents(".main-wrap.my-profile").addClass("filled"); 
+                                 $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                                $(this).parents(".main-wrap.my-profile").siblings("#step3").addClass("active");
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                                if (target.length) {
+                                    $('html,body').animate({
+                                        scrollTop: (target.offset().top - 110)
+                                    });
+                                    return false;
+                                }
+                            });
+                            $(".step4").click(function () {
+                                $(this).parents(".main-wrap.my-profile").removeClass("active");   
+                                 $(this).parents(".main-wrap.my-profile").addClass("filled"); 
+                                 $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                                $(this).parents(".main-wrap.my-profile").siblings("#step4").addClass("active");
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                                if (target.length) {
+                                    $('html,body').animate({
+                                        scrollTop: (target.offset().top - 110)
+                                    });
+                                    return false;
+                                }
+                            });
+                            $(".step5").click(function () {
+                                $(this).parents(".main-wrap.my-profile").removeClass("active");   
+                                 $(this).parents(".main-wrap.my-profile").addClass("filled"); 
+                                 $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                                $(this).parents(".main-wrap.my-profile").siblings("#step5").addClass("active");
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                                if (target.length) {
+                                    $('html,body').animate({
+                                        scrollTop: (target.offset().top - 110)
+                                    });
+                                    return false;
+                                }
+                            });
+                            $(".step6").click(function () {
+                                $(this).parents(".main-wrap.my-profile").removeClass("active");   
+                                 $(this).parents(".main-wrap.my-profile").addClass("filled"); 
+                                 $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                                $(this).parents(".main-wrap.my-profile").siblings("#step6").addClass("active");
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+                                if (target.length) {
+                                    $('html,body').animate({
+                                        scrollTop: (target.offset().top - 110)
+                                    });
+                                    return false;
+                                }
+                            });
+
+                            $(".current-outstanding").click(function(){
+                                $(this).hide();
+                                $(".step-view-btn.hide").show();
+                            });
+
+
+
+            });
+
+        </script>
+        
+        
+        
+        <script>
+        localStorage.clear();
+        let max_limit = 300000;
+        let timeout_limit = 5000;
+        
+        //================================Slider 1==========================================
+        let slider_min1 = 40000;
+        let slider_max1 = 190000;
+        let completed1 = 70000;
+        let start1 = 150000;
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var slider = document.getElementById('slider');
+            noUiSlider.create(slider, {
+                animationDuration: 300,
+                start: [completed1, start1],
+                connect: true,
+                step: 1,
+                range: {
+                    'min': slider_min1,
+                    'max': slider_max1
+                },
+                format: wNumb({
+                    decimals: 0,
+                     encoder: function( a ){
+      return Math.round(a*100)/100;
+  }
+                })
+            });
+
+            /* begin Value  */
+            localStorage.setItem('lastValue', start1);
+            var elementInput = document.querySelector(".slider-range-value");
+            var elementText = document.querySelector(".slider-range-text");
+
+            slider.noUiSlider.on("update", function (values, handle) {
+                elementInput.value = parseInt(values[handle]);
+                elementText.innerText = parseInt(values[handle]);
+                calculate_total();
+            });
+            
+            elementInput.addEventListener('change', function () {
+                var amount = parseInt([this.value]);
+                
+                var totals = get_totals();
+                
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+                
+                if(amount == '' || amount == 'undefined' || isNaN(amount) || amount < slider_min1){
+                    elementInput.value = elementText.innerText;
+                }else if(amount+Value2+Value3 > max_limit){
+                    $('.price-alert-view1').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = elementText.innerText;
+                    slider.noUiSlider.set([completed1, lastValue]);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                }else {
+                    slider.noUiSlider.set([completed1, amount]);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }            
+                calculate_total();
+            });
+            
+            slider.noUiSlider.on('change', function (values, handle) {
+                
+                var amount = parseInt(values[handle]);
+                
+                var totals = get_totals();
+                
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+                
+                if(amount == '' || amount == 'undefined' || isNaN(amount)){
+                    var lastValue = elementText.innerText;
+                    slider.noUiSlider.set([completed1, lastValue]);
+                }else if(amount+Value2+Value3 > max_limit){
+                    $('.price-alert-view1').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = max_limit - (Value2+Value3);//localStorage.getItem('lastValue');
+                    slider.noUiSlider.set([completed1, lastValue]);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                }else{
+                    localStorage.setItem('lastValue', amount);
+                    slider.noUiSlider.set([completed1, amount]);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }            
+                calculate_total();
+            });
+
+        });
+        
+        
+        //================================Slider 2==========================================
+        let slider_min2 = 10000;
+        let slider_max2 = 220000;
+        let start2 = 120000;
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var slider1 = document.getElementById('slider1');
+            noUiSlider.create(slider1, {
+                start: start2,
+                behaviour: 'tap',
+                //connect: true,
+                connect: 'lower',
+                //  connect: [true,false],
+                step: 1,
+                range: {
+                    'min': slider_min2,
+                    'max': slider_max2
+                },
+                format: wNumb({
+                    decimals: 0,
+                     encoder: function( a ){
+      return Math.round(a*100)/100;
+  }
+                })
+            });
+
+            /* begin Value  */
+            localStorage.setItem('lastValue1', start2);
+            var elementInput = document.querySelector(".slider-range-value1");
+            var elementText = document.querySelector(".slider-range-text1");
+
+            slider1.noUiSlider.on("update", function (values, handle) {
+                elementInput.value = parseInt(values[handle]);
+                elementText.innerText = parseInt(values[handle]);
+                calculate_total();
+                var totals = get_totals();
+            });
+
+            elementInput.addEventListener('change', function () {
+                var amount = parseInt([this.value]);
+                
+                var totals = get_totals();
+                
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+                
+                if(amount == '' || amount == 'undefined' || isNaN(amount) || amount < slider_min2){
+                    elementInput.value = elementText.innerText;
+                }else if(amount+Value1+Value3 > max_limit){
+                    $('.price-alert-view2').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = elementText.innerText;
+                    slider1.noUiSlider.set(lastValue);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                }else{
+                    slider1.noUiSlider.set(amount);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }            
+                calculate_total();
+            });
+            
+            slider1.noUiSlider.on('change', function (values, handle) {
+                var amount = parseInt(values[handle]);
+                
+                var totals = get_totals();
+                
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+                
+                if(amount == '' || amount == 'undefined' || isNaN(amount)){
+                    var lastValue = elementText.innerText;
+                    slider1.noUiSlider.set(lastValue);
+                }else if(amount+Value1+Value3 > max_limit){
+                    $('.price-alert-view2').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = max_limit - (Value1+Value3);//localStorage.getItem('lastValue1');
+                    slider1.noUiSlider.set(lastValue);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                }else{
+                    localStorage.setItem('lastValue1', amount);
+                    slider1.noUiSlider.set(amount);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }            
+                calculate_total();
+            });
+
+        });
+
+        //================================Slider 3==========================================
+        let slider_min3 = 10000;
+        let slider_max3 = 130000;
+        let start3 = 30000;
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var slider2 = document.getElementById('slider2');
+            noUiSlider.create(slider2, {
+                start: start3,
+                behaviour: 'tap',
+                //connect: true,
+                connect: 'lower',
+                //  connect: [true,false],
+                step: 1,
+                //tooltips: [ wNumb({ decimals: 0 }), wNumb({ decimals: 0 }) ],
+                range: {
+                    'min': slider_min3,
+                    'max': slider_max3
+                },
+                format: wNumb({
+                    decimals: 0,
+                     encoder: function( a ){
+      return Math.round(a*100)/100;
+  }
+                })
+            });
+
+            /* begin Value  */
+            localStorage.setItem('lastValue2', start3);
+            
+            var elementInput = document.querySelector(".slider-range-value2");
+            var elementText = document.querySelector(".slider-range-text2");
+
+            slider2.noUiSlider.on("update", function (values, handle) {
+                elementInput.value = parseInt(values[handle]);
+                elementText.innerText = parseInt(values[handle]);
+                calculate_total();
+            });
+            
+            
+
+            elementInput.addEventListener('change', function () {
+                var amount = parseInt([this.value]);
+                
+                var totals = get_totals();
+                
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+                
+                if(amount == '' || amount == 'undefined' || isNaN(amount) || amount < slider_min3){
+                    elementInput.value = elementText.innerText;
+                }else if(amount+Value1+Value2 > max_limit){
+                    $('.price-alert-view3').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = elementText.innerText;
+                    slider2.noUiSlider.set(lastValue);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                }else{
+                    slider2.noUiSlider.set(amount);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }            
+                calculate_total();
+            });
+            
+            slider2.noUiSlider.on('change', function (values, handle) {
+                var amount = parseInt(values[handle]);                    
+                
+                var totals = get_totals();
+                
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+                console.log(amount+Value1+Value2);
+                if(amount == '' || amount == 'undefined' || isNaN(amount)){
+                    var lastValue = elementText.innerText;
+                    slider2.noUiSlider.set(lastValue);
+                }else if(amount+Value1+Value2 > max_limit){
+                    $('.price-alert-view3').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = max_limit - (Value1+Value2);//localStorage.getItem('lastValue2');
+                    slider2.noUiSlider.set(lastValue);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                }else{
+                    localStorage.setItem('lastValue2', amount);
+                    slider2.noUiSlider.set(amount);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }            
+                calculate_total();
+            });
+
+        });
+        
+        document.addEventListener("DOMContentLoaded", function (event) {
+            calculate_total();
+        });
+        
+        "use strict";
+        var calculate_total = function(){
+            var sliderValue1 = parseInt(document.querySelector(".slider-valu").value);
+            var sliderValue2 = parseInt(document.querySelector(".slider-valu1").value);
+            var sliderValue3 = parseInt(document.querySelector(".slider-valu2").value);
+            var finalValue = document.getElementById("green");
+            var sum = sliderValue1 + sliderValue2 + sliderValue3;
+            finalValue.innerText = sum;
+            if(sum < max_limit){
+                $('.credit-limit-confirm-btn').addClass('disabled');
+                $('.sum').removeClass('green').addClass('red-color');
+                $('#rem_amount').text(max_limit - sum);
+                $('.price-alert-msz-success').fadeOut();
+                $('.price-alert-msz-err').fadeIn();
+            }else{
+                $('.credit-limit-confirm-btn').removeClass('disabled');
+                $('.sum').removeClass('red-color').addClass('green');
+                $('.price-alert-msz-err').fadeOut();
+                $('.price-alert-msz-success').fadeIn();
+            }
+        }
+        
+        "use strict";
+        var get_totals = function(){
+            var sliderValue1 = parseInt(document.querySelector(".slider-valu").value);
+            var sliderValue2 = parseInt(document.querySelector(".slider-valu1").value);
+            var sliderValue3 = parseInt(document.querySelector(".slider-valu2").value);
+            var finalValue = document.getElementById("green");
+            
+            var totals = new Object();
+            totals['sliderValue1'] = sliderValue1;
+            totals['sliderValue2'] = sliderValue2;
+            totals['sliderValue3'] = sliderValue3;
+            totals['finalValue'] = finalValue.innerText;
+            return totals;
+        }
+        
+        
+
+        </script>
+        
+        
+        
+        
+        
+        
+        <script>
+//            =========Custom Select box ===============================
+            var x, i, j, l, ll, selElmnt, a, b, c;
+            /* Look for any elements with the class "custom-select": */
+            x = document.getElementsByClassName("custom-select");
+            l = x.length;
+            for (i = 0; i < l; i++) {
+                selElmnt = x[i].getElementsByTagName("select")[0];
+                ll = selElmnt.length;
+                /* For each element, create a new DIV that will act as the selected item: */
+                a = document.createElement("DIV");
+                a.setAttribute("class", "select-selected");
+                a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                x[i].appendChild(a);
+                /* For each element, create a new DIV that will contain the option list: */
+                b = document.createElement("DIV");
+                b.setAttribute("class", "select-items select-hide");
+                for (j = 1; j < ll; j++) {
+                    /* For each option in the original select element,
+                     create a new DIV that will act as an option item: */
+                    c = document.createElement("DIV");
+                    c.innerHTML = selElmnt.options[j].innerHTML;
+                    c.addEventListener("click", function (e) {
+                        /* When an item is clicked, update the original select box,
+                         and the selected item: */
+                        var y, i, k, s, h, sl, yl;
+                        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                        sl = s.length;
+                        h = this.parentNode.previousSibling;
+                        for (i = 0; i < sl; i++) {
+                            if (s.options[i].innerHTML == this.innerHTML) {
+                                s.selectedIndex = i;
+                                h.innerHTML = this.innerHTML;
+                                y = this.parentNode.getElementsByClassName("same-as-selected");
+                                yl = y.length;
+                                for (k = 0; k < yl; k++) {
+                                    y[k].removeAttribute("class");
+                                }
+                                this.setAttribute("class", "same-as-selected");
+                                break;
+                            }
+                        }
+                        h.click();
+                    });
+                    b.appendChild(c);
+                }
+                x[i].appendChild(b);
+                a.addEventListener("click", function (e) {
+                    /* When the select box is clicked, close any other select boxes,
+                     and open/close the current select box: */
+                    e.stopPropagation();
+                    closeAllSelect(this);
+                    this.nextSibling.classList.toggle("select-hide");
+                    this.classList.toggle("select-arrow-active");
+                });
+            }
+
+            function closeAllSelect(elmnt) {
+                /* A function that will close all select boxes in the document,
+                 except the current select box: */
+                var x, y, i, xl, yl, arrNo = [];
+                x = document.getElementsByClassName("select-items");
+                y = document.getElementsByClassName("select-selected");
+                xl = x.length;
+                yl = y.length;
+                for (i = 0; i < yl; i++) {
+                    if (elmnt == y[i]) {
+                        arrNo.push(i)
+                    } else {
+                        y[i].classList.remove("select-arrow-active");
+                    }
+                }
+                for (i = 0; i < xl; i++) {
+                    if (arrNo.indexOf(i)) {
+                        x[i].classList.add("select-hide");
+                    }
+                }
+            }
+
+            /* If the user clicks anywhere outside the select box,
+             then close all select boxes: */
+            document.addEventListener("click", closeAllSelect);
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#terms_conditions').click(function() {
+                $('.e-sign-button').toggleClass('gray-btn');
+                $('.e-sign-button').toggleClass('tick-active');
+            });
+
+            $('#state_ban_details_button_1') .click(function() {
+                $('.state-bank-details-yes-block').show();
+                $('.state-bank-details-no-block').hide();
+            });
+
+            $('#state_ban_details_2') .click(function() {
+                $('.state-bank-details-yes-block').hide();
+                $('.state-bank-details-no-block').show();
+            });
+
+            $('.custom-selct-show').click(function() {
+                $('.custom-selct-list-block').slideToggle();
+                $(this).toggleClass('custom-selct-show-active');
+            });
+
+            $('.close-link').click(function() {
+                $('.custom-selct-list-block').slideToggle();
+                $(this).toggleClass('custom-selct-show-active');
+            });
+
+            $('.custom-selct-list').click(function() {
+                $('#readout').val($(this).data('holding'));
+            });
+
+            $('.ifsc-link-block').click(function() {
+                $('.neft-ifse-popup').addClass('open');
+                $('html').addClass('modal-open');
+            });
+
+            $('.close-neft-popup').click(function() {
+                $('.neft-ifse-popup').removeClass('open');
+                $('html').removeClass('modal-open');
+            });
+
+            $('.main-wrap').click(function() {
+                $(this).removeClass('filled');
+            });
+
+            $('#step_title_1').click(function() {
+                $('.step-1-btn').hide();
+            });
+
+            $('#step_title_2').click(function() {
+                $('.step-2-btn').hide();
+            });
+
+            $('.name-in-bank-link').click(function() {
+                $('.name-in-bank').toggle();
+                $('.name-in-bank').toggleClass('name-in-bank-extra');
+            });
+            
+            });
+
+            function viewEdit() {
+                $('.view-edit').show();
+                $('.view-edit-details').hide();
+            }
+
+            function cmnSubmit() {
+                $('.update-lable-contact-block').show();
+                $('.card-note-holder').show();
+                $('.view-edit').hide();
+                $('.unmasked').show();
+                $('.masked').hide();
+            }
+
+            function updateEmail() {
+                $('.email-block span').hide();
+                $('.email-block input').show();
+                $('.emai-cncl-submit').show();
+                $('.update-email').hide();
+                $('.update-phone-number').hide();
+            }
+
+            function emailUpdateSubmit() {
+                $('.email-submit-otp-block').show();
+                $('.form-btn-block').hide();
+                $('.email-block .unmasked').show();
+                $('.email-block input').hide();
+            }
+
+
+            function updatePhoneNumber() {
+                $('.phone-number-block span').hide();
+                $('.phone-number-block input').show();
+                $('.phone-cncl-submit').show();
+                $('.update-email').hide();
+                $('.update-phone-number').hide();
+            }
+
+            function phoneUpdateSubmit() {
+                $('.phone-submit-otp-block').show();
+                $('.form-btn-block').hide();
+                $('.phone-number-block .unmasked').show();
+                $('.phone-number-block input').hide();
+            }
+
+            function cancelUpdate() {
+                $('.update-email').show();
+                $('.update-phone-number').show();
+                $('.form-btn-block').hide();
+                $('.lable-contact-block .unmasked').show();
+                $('.lable-contact-block input').hide();
+            }
+
+            function viewEditInput() {
+                $('#v_e_submit').removeClass('gray-btn pointer-events-none');
+            }
+
+            function viewEditInput2() {
+                $('#v_e_submit_2').removeClass('gray-btn pointer-events-none');
+            }
+
+            function viewEditInput3() {
+                $('#v_e_submit_3').removeClass('gray-btn pointer-events-none');
+            }
+        </script>
+
+        <!--[if IE 8]>
+            <script type="text/javascript" src="/creditcards/resources/concat-js/ie.all.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="/creditcards/resources/min-js/custom.min.js?rel=88c95f7024"></script>
+
+
+
+
+
+
+
+
+        <input type="hidden" id="deliveryChargeWithGST" data-delivery-charge-with-gst="116.82">
+
+        <!-- suspicious transaction  popup starts -->		
+
+        <input type="hidden" id="fraudControlStatusFlagVal" value="false">
+        <input type="hidden" id="isAlertToBeDisplayedVal" value="true">
+
+
+
+        <!--#include virtual="components/common-footer.html" -->
+
+
+</html>

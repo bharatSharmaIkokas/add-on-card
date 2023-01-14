@@ -1416,7 +1416,7 @@
 <div class="points-tabbing">
     
 <div class="collapse-content">
-    <div class="form-title">Enter Add-on card holder details</div>
+    <div class="form-title">Enter Add-on applicant’s details</div>
     <div class="input-wrapp">
         <div class="input-block">
             <label><div class="sub-label">Relationship with primary card holder</div>
@@ -1437,7 +1437,7 @@
         </div>
         <div class="input-block">
             <label><div class="sub-label">Name</div>
-                <div class="sm-text">(This will be printed on the card)</div>
+                <div class="sm-text">(Name should be as per the KYC document)</div>
             </label>
             <div class="input-field">
                 <input type="text" value="Neha" />
@@ -1446,7 +1446,7 @@
 
         <div class="input-block">
             <label><div class="sub-label">Gender</div>
-                <div class="sm-text">(Gender of the Add-on card applicant)</div>
+                <!-- <div class="sm-text">(Gender of the Add-on card applicant)</div> -->
             </label>
             <div class="input-field field-wrap">
                 <div class="custom-select">
@@ -1464,7 +1464,7 @@
         </div>
         <div class="input-block">
             <label><div class="sub-label">Date of Birth</div>
-                <div class="sm-text">(Date of birth of the Add-on card applicant)</div>
+                <div class="sm-text">(Date of birth should be as per the KYC document)</div>
             </label>
             <div class="input-field date-cal-field">
                 <input type="text" name="birthday" value="" id="date_input" />
@@ -1473,130 +1473,48 @@
         </div>
         <div class="input-block">
             <label><div class="sub-label">Mobile Number</div>
-                <div class="sm-text">(Add-on card applicant mobile number)</div>
+                <div class="sm-text">(KYC Authentication OTP will be sent on the Aadhar linked Add on Card applicant mobile number)</div>
             </label>
             <div class="input-field">
                 <div class="mobile-number-wrapp">
-                    <div class="m-code-block">00</div>
+                    <div class="m-code-block">+91</div>
                     <div class="m-filed-block">
-                        <input type="number" />
+                        <input type="number" placeholder="Enter mobile number" />
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="form-center-title">Address for picking KYC documents </div>
-        <div class="input-block">
-            <label><div class="sub-label">Pin code</div>
-            </label>
-            <div class="input-field position-relative search-input-wrapp">
-                <input type="text" value="122001" />
-                <img src="img/search.svg" alt="" class="search-icon-block">
-            </div>
-        </div>
-        <div class="input-block">
-            <label><div class="sub-label">Address line 1</div>
+        <div class="input-block align-center-field">
+            <label><div class="sub-label">Upload Add-on Applicant’s Photo</div>
             </label>
             <div class="input-field">
-                <input type="text" value="951,28 , Jyoti Park , Sector 10" />
-            </div>
-        </div>
-
-        <div class="input-block">
-            <label><div class="sub-label">Address line 2</div>
-            </label>
-            <div class="input-field">
-                <input type="text" value="Near Geeta Asshram" />
-            </div>
-        </div>
-
-        <div class="input-block">
-            <label><div class="sub-label">City</div>
-            </label>
-            <div class="input-field">
-                <input type="text" value="Gurugram" />
-            </div>
-        </div>
-
-        <div class="input-block">
-            <label><div class="sub-label">State</div>
-            </label>
-            <div class="input-field">
-                <input type="text" value="Haryana" />
-            </div>
-        </div>
-
-        <!-- <div class="input-block">
-            <label><div class="sub-label">City</div>
-            </label>
-            <div class="input-field field-wrap">
-                <div class="custom-select">
-                    <select class="form-control w-100">
-                        <option value="">Select</option>
-                        <option value="">Panipat</option>
-                        <option value="">Gurugram</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="input-block">
-            <label><div class="sub-label">State</div>
-            </label>
-            <div class="input-field field-wrap">
-                <div class="custom-select">
-                    <select class="form-control w-100">
-                        <option value="">Haryana</option>
-                        <option value="">Rajasthan</option>
-                        <option value="">Punjab</option>
-                    </select>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="input-block">
-            <label><div class="sub-label">Appointment Date and Time</div>
-            </label>
-            <div class="input-field field-wrap date-time-block">
-                <div class="row">
-                    <div class="col-md-6 date-drop-block">
-                        <div class="input-field custom-select">
-                            <select class="form-control w-100">
-                                <option value="">Select date</option>
-                                <option value="">27-Oct-2021</option>
-                                <option value="">28-Oct-2021</option>
-                                <option value="">29-Oct-2021</option>
-                                <option value="">30-Oct-2021</option>
-                            </select>
+                <div class="lable-contact-block valid-field position-relative">
+                    <div class="form-upload">
+                        <div class="file-upload-wrapper" data-text="">
+                          <input name="file-upload-field" type="file" class="file-upload-field" value="">
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input-field custom-select">
-                            <select class="form-control w-100">
-                                <option value="">Select time</option>
-                                <option value="">10.00 AM </option>
-                                <option value="">11.00 AM </option>
-                                <option value="">12.00 AM </option>
-                                <option value="">1.00 AM </option>
-                                <option value="">2.00 AM </option>
-                                <option value="">3.00 AM </option>
-                                <option value="">4.00 AM </option>
-                                <option value="">5.00 AM </option>
-                                <option value="">6.00 AM </option>
-                                <option value="">7.00 AM </option>
-                            </select>
-                        </div>
-                    </div>
+                      </div>
+                      <div class="sm-text pt-10">File should be in .pdf, .jpg, .tiff or .png format & 
+                        upload size should not exceed 5 MB</div>
+                        <div class="sm-text error">The photo uploaded is invalid. Please select a different photo.</div>
+                      <!-- <label for="encashAccNo" class="valid"></label> -->
                 </div>
             </div>
         </div>
-        <div class="submit-button-wrapp"><a href="congratulations.html" class="blue-btn">Submit</a></div>
+        
         
     </div>
 </div>
 
 </div>
 
+</section>
+<section class="main-wrap my-profile border-top border-bottom">
+    <div class="text-md mb-20">Please authenticate using Add On Card Applicant’s KYC documents</div>
+    <div class="submit-button-wrapp"><a href="javascript:void(0);" class="blue-btn m-0 discliamer-link-block gray-btn">KYC through DigiLocker</a></div>
+    <div class="sm-text pt-10 br-sm-none">Do not close or refresh the page when processing through DigiLocker <br>
+        Name and DOB should be same as KYC document</div>
 </section>
     <section class="otp-section-block">
         <hr>
@@ -1785,6 +1703,57 @@
         </div>
 
 
+        <form >
+            <div class="modal-overlay discliamer-popup " id="neft-ifsc-popup">
+                  <section class="modal" id="neft-searchPopup" style="margin-top: -190px;">
+                      <div class="modal-wrap">
+                          <!-- <header>
+                                <span class="close-neft-popup"></span>
+                                                
+                          </header> -->
+                          <img src="img/disclaimer.PNG" alt="" style="width: 100%;">
+                                             
+                      </div>
+                      <div class="modal-content clearfix">
+                            <div class="modal-button-block">
+                                <a href="digilocker.html" class="button primary branch-searchBtn">Proceed</a>
+                                <a href="javascript:void(0);" class="button primary branch-searchBtn close-neft-popup">Cancel</a>
+                                 <!-- <a href="javascript:void(0);" id="reset-search-fields" class="button secondary"> Reset</a> -->
+                                 </div>	
+                          </div>
+                  </section>
+                  
+                  <section class="modal neft-bankdetails-popup hide kyc-modal" id="neft-bankDetailPopup" style="margin-top: -190px;">
+                      <div class="modal-wrap">
+                          <header>
+                                <span class="close-neft-popup"></span>
+                              <h1 class="modal-title">Select the branch</h1> 
+                                                
+                          </header>
+                          <div id="listLength"></div>
+                           <input type="hidden" class="hidenListCount">
+                          <div class="text-box3">
+                            <span class="neft-headCol1">SELECT  </span>
+                            <span class="neft-headCol2">IFSC  </span>
+                            <span class="neft-headCol3">BANK</span>
+                            <span class="neft-headCol4">BRANCH</span>
+                            <span class="neft-headCol5">ADDRESS</span>
+                        </div>
+                          <div id="dynamicSerachList"></div> 
+                          <div id="filteredErrMsg"></div>
+                            <div class="load-more-list bank-detail-load">
+                                 <a class="button load-more-link" href="javascript:void(0);" id="load-more-bankDetails">Load More <span id="neft-load-more-text"></span></a>
+                            </div>                       
+                      </div>
+                      <div class="modal-content clearfix">
+                            <div class="reset-box1"> <a href="javascript:void(0);" id="back-search-fields" class="button secondary"> Back</a> </div>		  
+                             <div class="neft-button-wrap">
+                                   <a href="javascript:void(0);" class="button primary branch-searchBtn" id="neft-confirmBtn" style="pointer-events: none;">Confirm</a>
+                             </div>
+                          </div>
+                  </section>
+              </div>
+            </form>
 
         <script src="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@master/extras/noUiSlider/nouislider.min.js"></script>
         <script src="js/custom-file-input.js"></script>
@@ -2511,8 +2480,26 @@ $(document).on("click", ".toggle", function(){
                 $('.name-in-bank').toggle();
                 $('.name-in-bank').toggleClass('name-in-bank-extra');
             });
+
+            $('.discliamer-link-block').click(function() {
+                $('.discliamer-popup').addClass('open');
+                $('html').addClass('modal-open');
+            });
+
+            $('.close-neft-popup').click(function() {
+                $('.discliamer-popup').removeClass('open');
+                $('html').removeClass('modal-open');
+            });
+
+            $('.file-upload-wrapper').click(function () {
+                $('.discliamer-link-block').removeClass('gray-btn');
+            });
             
             });
+
+            $(".form-upload").on("change", ".file-upload-field", function(){ 
+    $(this).parent(".file-upload-wrapper").attr("data-text",         $(this).val().replace(/.*(\/|\\)/, '') );
+});
 
             function tickActive() {
                 $('.otp-section-block').show();
